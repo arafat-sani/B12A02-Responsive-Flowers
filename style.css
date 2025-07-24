@@ -1,6 +1,8 @@
 
 
-
+.hidden{
+    overflow: clip;
+}
 .noto-serif-font {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
@@ -27,7 +29,7 @@
 
 
 .container {
-  max-width: 1180px; /* or 1400px, 900px as per your design */
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
@@ -72,11 +74,24 @@ a{
     text-decoration: none;
    
 }
+
 .anchor{
     display: flex;
-  
+    font-size: 24px;
     align-items: center;
+  
 
+}
+.anchor > div {
+    display: flex;
+    gap: 30px;
+}
+
+
+.cart-img{
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
 }
 
 .banner{
@@ -107,13 +122,13 @@ a{
 .plants-card{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    gap: 15px;
 }
 .card-des{
     text-align: center;
 }
 .card button{
-    width: 97%;
+    width: 100%;
     height: 50px;
     background-color: #E95A08;
     border: none;
@@ -130,13 +145,37 @@ h1{
 .plants-lover{
     margin-top: 210px;
     display: flex;
-    gap: 60px;
+    gap: 100px;
     
    
 }
+.main-img{
+    object-fit: cover;
+}
+.lover-left-side{
+   position: relative;
+    display: inline-block;
+    
+}
+.badge-img{
+    position: absolute;
+     
+      width: 350px;
+    top: -120px;
+    right: -120px;
+     
+     
+     
+}
+
+
+
+
+
+
 .lover-img{
-    height: 597px;
-    width: 540px;
+    /* height: 597px; */
+    /* width: 540px; */
 }
 .lover-right-side h1{
     padding-left: 20px;
@@ -149,13 +188,35 @@ h1{
 
 
 /* join section */
-.join{
-
-
-    background-color: url("./assets/news-letter-bg.png");
-    width: 100%;
+.join {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */          
+  text-align: center;
+  height: 533px;
+  background-image: url("./assets/news-letter-bg.png");
 }
 
+
+
+.input{
+    align-items: center;
+}
+
+.input input {
+     height: 50px;
+    width: 830px;
+    border: none;
+    
+}
+.input button{
+    height: 50px;
+    width: 186px;
+    border: none;
+    background-color: #E95A08;
+    font-weight: bold;
+  
+}
 
 
 
@@ -165,6 +226,7 @@ h1{
     
     display: flex;
     justify-content: space-evenly;
+    padding-top: 50px;
  }
  .links{
     display: flex;
@@ -203,50 +265,173 @@ h1{
 
 
 
-/* media query  */
+/* --------------------------------media query ------------------------------------------------------------------------ */
+
+.hide{
+    display: none;
+}
+
+
+
+
+
 
 /* banner section */
 @media screen and (max-width:576px) {
+    
+  .anchor div{
+    display: none;
+  }
+  .anchor{
+    gap: 0;
+  }
+
+
+
+  .container {
+  
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  
+  width: 100%;
+}
+
+
+
+
+    
     .banner{
         flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
     }
     
-}
+    .banner-right-side img{
+       
+        height: 100%;
+        width: 100%;
+
+    }
+    .banner-text{
+        font-size: medium;
+    }
+    .ban-left-side span{
+        font-size: 24px;
+    }
+    
+
+
+
+    }
+    
 /* plants section */
 @media screen and (max-width:576px) {
+
+   .card{
+      width: 100%;
+   }
+   .card img{
+    width: 100%;
+   }
+
+   
+   
     .plants-card{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+   justify-content: space-between;
+   
 }
 
-    
+
 }
+
+ 
+
+
+    
+
 /* plants-lover section */
 @media screen and (max-width:576px) {
     .plants-lover{
+        margin-top: 41px;
         flex-direction: column;
     }
     .lover-right-side{
         padding: 20px;
     }
+    .lover-img{
+       height: 396px;
+       /* width: 358px; */
+       width: 100%;
+    }
+    .badge-img{
+        display: none;
+    }
+    .plants-lover{
+        
+        gap: 0;
+    }
+     .lover-right-side{
+        padding: 0;
+     }
+     .lover-right-side h1{
+        padding: 0;
+     }
+     .banner-text{
+        padding: 0;
+     }
+    h1{
+        font-size: 24px;
+    }
 
     
 }
+
+/* join section */
+
+@media screen and (max-width:576px) {
+      .join{
+        width: 100%;
+
+      }
+      .input{
+        width: 80%;
+      }
+      .input input {
+       width: 67%;
+      }
+      .input button{
+        width: 30%;
+      }
+    
+    
+}
+
+
+
+
 
 /* footer section */
 @media screen and (max-width:576px) {
     .footer{
         flex-direction: column;
+        padding-top: 20px;
+        justify-content: flex-start;
     }
     .links {
         flex-direction: column;
         gap: 0px;
+        margin-left: -30px;
+        padding-left: 0;
     }
     .footer .links ul li {
     
        
       margin-bottom: 32px;
     }
+
     
 }
