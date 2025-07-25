@@ -182,6 +182,84 @@ h1{
 }
 
 
+/* latest deal sec */
+ 
+.latest-deals p{
+    /* background-color: aqua; */
+    margin: 0;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+.deal-big-text{
+   padding: 0 20%;
+    font-size: 22px;
+}
+.latest-deals{
+    margin-top: 130px;
+    margin-bottom: 120px;
+}
+.part-1{
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+   
+    
+    
+}
+.main-deal-img-sec{
+    gap: 20px;
+    display: flex;
+    margin-top: 8%;
+    
+}
+.main-deal-img-sec img {
+    border-radius: 20px;
+}
+
+.image-container{
+    position: relative;
+    width: 100%;
+}
+.image-container img {
+  
+ 
+}
+.shadow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  border-radius: 25px;
+  background: rgba(0,0,0,0.4); /* adjust opacity for stronger or lighter shadow */
+  z-index: -0.5; /* place it below the text but above the image */
+}
+.image-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column; /* stack spans vertically */
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 20px;
+  
+ 
+}
+.image-text .shop-now {
+    text-decoration: underline;
+}
+
+
 
 
 
@@ -228,6 +306,8 @@ h1{
 
 
 
+
+
 /* footer section */
  .footer  {
     
@@ -260,7 +340,9 @@ h1{
 }
      
 
-
+/* * {
+  outline: 1px solid red;
+} */
 
 
 
@@ -447,6 +529,77 @@ h1{
 
     
 }
+
+
+
+/* latest deals  */
+@media screen and (max-width:576px) {
+
+       
+   
+  .main-deal-img-sec {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .part-1 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+  }
+
+  .image-text {
+    font-size: 16px;
+    padding: 3px 6px;
+  }
+
+  .image-text .shop-now {
+    font-size: 14px;
+  }
+
+  .deal-big-text {
+    padding: 0 5%;
+    font-size: 18px;
+  }
+
+
+
+
+
+
+
+
+    .deal-text{ 
+        font-size: 22px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* join section */
 @media screen and (max-width:576px) {
