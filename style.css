@@ -201,7 +201,14 @@ h1{
 
 .input{
     align-items: center;
+
+
+    
 }
+
+
+
+
 
 .input input {
      height: 50px;
@@ -278,17 +285,39 @@ h1{
 
 /* banner section */
 @media screen and (max-width:576px) {
+
+/* * {
+  outline: 1px solid red;
+} */
+
+
+
+    html, body {
+  overflow-x: hidden;
+}
+
+
+
+    body{
+        /* margin-left: 8px; */
+        margin-right: 0;
+    }
     
   .anchor div{
     display: none;
   }
+  
   .anchor{
     gap: 0;
   }
 
+  .nav-wrap{
+    width: 95%;
+  }
 
 
-  .container {
+
+  /* .container {
   
   
   padding-left: 10px;
@@ -296,7 +325,7 @@ h1{
   
   
   width: 100%;
-}
+} */
 
 
 
@@ -329,21 +358,41 @@ h1{
 /* plants section */
 @media screen and (max-width:576px) {
 
-   .card{
+   /* .card{
       width: 100%;
-   }
-   .card img{
+   } */
+   /* .card img{
     width: 100%;
-   }
+   } */
 
    
    
     .plants-card{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-   justify-content: space-between;
+   /* justify-content: space-between; */
    
 }
+.container{
+    padding-left: 0px;
+}
+
+
+.plants-card {
+  
+  justify-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+}
+
+
+
+
+
+
 
 
 }
@@ -363,10 +412,19 @@ h1{
         padding: 20px;
     }
     .lover-img{
-       height: 396px;
+       /* height: 396px; */
        /* width: 358px; */
        width: 100%;
+       margin-left: -2.5%;
+       
+      
     }
+
+
+  
+
+
+
     .badge-img{
         display: none;
     }
@@ -375,7 +433,7 @@ h1{
         gap: 0;
     }
      .lover-right-side{
-        padding: 0;
+        /* padding: 0; */
      }
      .lover-right-side h1{
         padding: 0;
@@ -396,15 +454,15 @@ h1{
         width: 100%;
 
       }
-      .input{
+      /* .input{
         width: 80%;
-      }
-      .input input {
+      } */
+      /* .input input {
        width: 67%;
-      }
-      .input button{
+      } */
+      /* .input button{
         width: 30%;
-      }
+      } */
     
     
 }
@@ -431,6 +489,49 @@ h1{
        
       margin-bottom: 32px;
     }
+
+
+
+
+
+
+
+
+
+
+
+.input {
+  width: 90%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.input input {
+  height: 50px;
+  width: 70%; /* change from 830px to percent */
+  border: none;
+}
+.input button {
+  height: 50px;
+  width: 25%; /* change from 186px to percent */
+  border: none;
+  background-color: #E95A08;
+  font-weight: bold;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
 
     
 }
