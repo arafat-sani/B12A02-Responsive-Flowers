@@ -28,7 +28,9 @@ body{
 
 
 
-
+.shop{
+  font-size: 28px;
+}
 
 .main-offer{
     font-size: 65px;
@@ -473,12 +475,7 @@ h1{
 /* plants section */
 @media screen and (max-width:576px) {
 
-   /* .card{
-      width: 100%;
-   } */
-   /* .card img{
-    width: 100%;
-   } */
+   
 
    
    
